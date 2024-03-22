@@ -15,7 +15,7 @@ GitHub Action to compare SKOS files, used by https://github.com/openactive/activ
 
 ### `hasChanges`
 
-Boolean indicating if the SKOS file has changed
+"true" or "false", indicating if the SKOS file has changed
 
 ### `changeDescription`
 
