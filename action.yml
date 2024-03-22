@@ -1,0 +1,17 @@
+name: 'SKOS Compare Action'
+description: 'Get a list of prefLabels that have changed in a SKOS file'
+inputs:
+  new_json_file:
+    description: 'New JSON-LD SKOS file path'
+    required: true
+  old_json_file:
+    description: 'Old JSON-LD SKOS file path'
+    required: true
+outputs:
+  hasChanged:
+    description: 'Boolean indicating if the SKOS file has changed'
+  changeDescription:
+    description: 'Human-readable list of the prefLabels that have changed'
+runs:
+  using: 'node18'
+  main: 'index.js'
