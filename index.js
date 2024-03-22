@@ -36,11 +36,11 @@ try {
 
   if (humanReadableString) {
     console.log(`Found changes:\n\n${humanReadableString}`);
-    core.setOutput("hasChanges", "true");
+    core.setOutput("hasChanges", true);
     core.setOutput("changeDescription", humanReadableString);
   } else {
     console.log(`No changes to the activity list were found`);
-    core.setOutput("hasChanges", "false");
+    core.setOutput("hasChanges", false);
   }
 } catch (error) {
   core.setFailed(error.message);
