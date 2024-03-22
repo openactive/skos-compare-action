@@ -8,7 +8,7 @@ inputs:
     description: 'Old JSON-LD SKOS file path'
     required: true
 outputs:
-  hasChanged:
+  hasChanges:
     description: 'Boolean indicating if the SKOS file has changed'
   changeDescription:
     description: 'Human-readable list of the prefLabels that have changed'
