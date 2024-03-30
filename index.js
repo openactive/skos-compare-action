@@ -11,7 +11,7 @@ try {
   if (!fs.existsSync(core.getInput('old_jsonld_file')) && fs.existsSync(core.getInput('new_jsonld_file'))) {
     console.log(`No old JSON-LD file found, so treat new JSON-LD file as an initial version of the SKOS Vocabulary`);
     core.setOutput("hasChanges", true);
-    core.setOutput("changeDescription", "Initial version of the SKOS Vocabulary");
+    core.setOutput("changeDescription", "- Initial version of the SKOS Vocabulary added");
     return;
   }
 
