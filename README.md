@@ -1,13 +1,13 @@
 # skos-compare-action
-GitHub Action to compare SKOS files, used by https://github.com/openactive/activity-list
+GitHub Action to compare SKOS files, used by https://github.com/openactive/skos-vocabulary-workflows.
 
 ## Inputs
 
-### `new_json_file`
+### `new_jsonld_file`
 
 **Required** New JSON-LD SKOS file path.
 
-### `old_json_file`
+### `old_jsonld_file`
 
 **Required** Old JSON-LD SKOS file path.
 
@@ -27,6 +27,6 @@ Human-readable list of the prefLabels that have changed
 ```
 uses: openactive/skos-compare-action@main
 with:
-  new_json_file: './activity-list-updated.jsonld'
-  old_json_file: './activity-list.jsonld'
+  new_jsonld_file: './activity-list-updated.jsonld'
+  old_jsonld_file: './activity-list.jsonld'
 ```

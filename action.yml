@@ -1,10 +1,10 @@
 name: 'SKOS Compare Action'
 description: 'Get a list of prefLabels that have changed in a SKOS file'
 inputs:
-  new_json_file:
+  new_jsonld_file:
     description: 'New JSON-LD SKOS file path'
     required: true
-  old_json_file:
+  old_jsonld_file:
     description: 'Old JSON-LD SKOS file path'
     required: true
 outputs:

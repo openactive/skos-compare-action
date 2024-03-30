@@ -7,8 +7,16 @@ function arrayToMap(arr, key) {
 }
 
 try {
-  const newJsonFilePath = core.getInput('new_json_file');
-  const oldJsonFilePath = core.getInput('old_json_file');
+  // If old_jsonld_file does not exist, and new_jsonld_file exists, return true as there are changes
+  if (!fs.existsSync(core.getInput('old_jsonld_file')) && fs.existsSync(core.getInput('new_jsonld_file'))) {
+    console.log(`No old JSON-LD file found, so treat new JSON-LD file as an initial version of the SKOS Vocabulary`);
+    core.setOutput("hasChanges", true);
+    core.setOutput("changeDescription", "Initial version of the SKOS Vocabulary");
+    return;
+  }
+
+  const newJsonFilePath = core.getInput('new_jsonld_file');
+  const oldJsonFilePath = core.getInput('old_jsonld_file');
   const newJson = JSON.parse(fs.readFileSync(newJsonFilePath, {encoding:'utf8'}));
   const oldJson = JSON.parse(fs.readFileSync(oldJsonFilePath, {encoding:'utf8'}));
 
